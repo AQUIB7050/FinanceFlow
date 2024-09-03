@@ -17,6 +17,7 @@ const ExpenseForm = (props) => {
         }
     }
 
+
     const submitHandler = (event) => {
         event.preventDefault();
 
@@ -65,3 +66,40 @@ const ExpenseForm = (props) => {
     );
 }
 export default ExpenseForm;
+
+
+
+//Alternate Way!
+
+ //Using Object Inside useState argument
+  //   const [newUserDetail, setNewUserDetail] = useState({
+  //     newTitle: "",
+  //     newAmount: "",
+  //     newDate: "",
+  //   });
+
+//   const titleChangeHandler = (event) => {
+    //way to simply setting the value to handle individually
+//     setNewTitle(event.target.value);
+
+//         //One way of retaining the previous state of other two and updating the one.
+//         setNewUserDetail({
+//           ...newUserDetail,
+//           newTitle: event.target.value,
+//         });
+
+//         //other way of retaining the previous state of other two and changing one.
+//         setUserDetail((prevState) => {
+//           return { ...prevState, newTitle: event.target.value };
+//         });
+//   };
+
+
+
+//way to simply setting the value to handle individually and accessing :- 
+
+//   const titleChangeHandler = (event) => {
+//     setNewTitle(event.target.value);
+//   }
+
+//<input type="text" value={newTitle} onChange={titleChangeHandler} />
