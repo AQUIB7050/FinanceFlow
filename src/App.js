@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from 'react';
 
 import Expense from "./components/Expenses/Expense";
 import NewExpense from './components/NewExpenses/NewExpense';
@@ -28,15 +29,19 @@ const App = () => {
     }
   ]
 
+  const [myExpenses,setExpense] = useState(expenses);
+
   const handleFormSubmit = (expenses) =>{
-    console.log(expenses);
+    setExpense((prevExp) => {
+      return [expenses, ...prevExp]
+    });
   }
 
 
   return ( 
     <div>
     <NewExpense onSubmit={handleFormSubmit}/>
-    <Expense expenses={expenses}/>
+    <Expense expenses={myExpenses}/>
     </div>  
   );
 }
