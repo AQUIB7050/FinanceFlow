@@ -5,6 +5,7 @@ import Expense from "./components/Expenses/Expense";
 import NewExpense from './components/NewExpenses/NewExpense';
 
 
+
 const App = () => {
 
   const expenses = [
